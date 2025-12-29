@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário de Cadastro</title>
+    <style>
+        body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#222;margin:0;padding:24px}
+        .card{max-width:720px;margin:24px auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(19,24,33,0.06)}
+        h1{margin:0 0 12px;font-size:20px}
+        form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        label{display:block;font-size:13px;margin-bottom:6px;color:#333}
+        input[type="text"],input[type="email"],input[type="password"],select,textarea{width:100%;padding:10px;border:1px solid #dcdfe6;border-radius:6px;font-size:14px}
+        textarea{resize:vertical;min-height:100px;grid-column:1 / -1}
+        .full{grid-column:1 / -1}
+        .actions{display:flex;gap:8px;justify-content:flex-end;grid-column:1 / -1;margin-top:6px}
+        button{padding:10px 14px;border-radius:6px;border:0;font-weight:600;cursor:pointer}
+        button[type="submit"]{background:#1b6bff;color:#fff}
+        button[type="reset"]{background:#eef2ff;color:#123}
+        .hint{font-size:13px;color:#666;margin-top:6px}
+        @media (max-width:680px){form{grid-template-columns:1fr} .full, textarea{grid-column:auto}}
+    </style>
+</head>
+<body>
+    <main class="card">
+        <h1>Cadastro Loja do Futuro</h1>
+        <p class="hint">Preencha os campos abaixo e pressione <strong>Enviar</strong>.</p>
+
+        <form action="#" method="post" id="signupForm" novalidate>
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome completo" required aria-required="true">
+            </div>
+
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@exemplo.com" required aria-required="true">
+            </div>
+
+            <div>
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Crie uma senha" minlength="6" required aria-required="true">
+            </div>
+
+            <div>
+                <label for="country">País</label>
+                <select id="country" name="country" required aria-required="true">
+                    <option value="">-- Selecione --</option>
+                    <option value="br">Brasil</option>
+                    <option value="pt">Portugal</option>
+                    <option value="es">Espanha</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="other">Outro</option>
+                </select>
+            </div>
+
+            <div class="full">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" placeholder="Escreva uma mensagem ou descrição..." maxlength="1000"></textarea>
+            </div>
+
+            <div class="actions full">
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+
+        
+    </main>
+
+    <script>
+        // Validação simples no cliente para melhor experiência
+        (function(){
+            const form = document.getElementById('signupForm');
+            form.addEventListener('submit', function(e){
+                if(!form.checkValidity()){
+                    e.preventDefault();
+                    form.reportValidity();
+                } else {
+                    e.preventDefault();
+                    alert('Formulário submetido com sucesso. Agradecemos o seu cadastro!');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
