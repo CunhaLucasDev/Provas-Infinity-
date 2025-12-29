@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário - 3 meses</title>
+    <style>
+        :root{--bg:#f7f8fb;--card:#fff;--accent:#1b6bff;--holiday:#ffdede;--event:#fff7e6}
+        body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);margin:0;padding:20px;color:#222}
+        .wrap{max-width:1100px;margin:0 auto}
+        h1{text-align:center;margin:8px 0 18px}
+        .calendars{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+        .calendar{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+        caption{font-weight:700;margin-bottom:8px;text-align:left;font-size:18px}
+        table{width:100%;border-collapse:collapse;table-layout:fixed}
+        th,td{width:14.2857%;padding:8px;border:1px solid #eee;vertical-align:top;height:78px}
+        th,td{box-sizing:border-box}
+        th{background:#fafafa;font-weight:600;color:#444;text-align:center}
+        td .date{font-weight:700;display:block;margin-bottom:6px}
+        .holiday{background:var(--holiday)}
+        .event{background:var(--event);padding:4px;margin-top:4px;border-radius:4px;font-size:13px}
+        .muted{color:#666;font-size:13px}
+        @media (max-width:480px){th,td{padding:6px;height:64px}}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Calendário — Dez 2025 / Jan 2026 / Fev 2026</h1>
+        <div class="calendars">
+            <!-- Dezembro 2025 (mês atual) -->
+            <div class="calendar" aria-label="Calendário Dezembro 2025">
+                <table>
+                    <caption>Dezembro 2025</caption>
+                    <thead>
+                        <tr>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                            <th>Dom</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="date">1</span></td>
+                            <td><span class="date">2</span></td>
+                            <td><span class="date">3</span></td>
+                            <td><span class="date">4</span></td>
+                            <td><span class="date">5</span></td>
+                            <td><span class="date">6</span></td>
+                            <td><span class="date">7</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">8</span></td>
+                            <td><span class="date">9</span></td>
+                            <td><span class="date">10</span></td>
+                            <td><span class="date">11</span></td>
+                            <td><span class="date">12</span></td>
+                            <td><span class="date">13</span></td>
+                            <td><span class="date">14</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">15</span></td>
+                            <td><span class="date">16</span></td>
+                            <td><span class="date">17</span></td>
+                            <td><span class="date">18</span></td>
+                            <td><span class="date">19</span></td>
+                            <td><span class="date">20</span></td>
+                            <td><span class="date">21</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">22</span></td>
+                            <td><span class="date">23</span></td>
+                            <td><span class="date">24</span><div class="event">Reunião familiar (noite)</div></td>
+                            <td class="holiday"><span class="date">25</span><div class="event">Natal — Feriado</div></td>
+                            <td><span class="date">26</span></td>
+                            <td><span class="date">27</span></td>
+                            <td><span class="date">28</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">29</span><div class="event">Estudo: JavaScript 18:00</div></td>
+                            <td><span class="date">30</span><div class="event">Revisão: Java</div></td>
+                            <td><span class="date">31</span><div class="event">Ano-Novo: Metas</div></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Janeiro 2026 -->
+            <div class="calendar" aria-label="Calendário Janeiro 2026">
+                <table>
+                    <caption>Janeiro 2026</caption>
+                    <thead>
+                        <tr>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                            <th>Dom</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="holiday"><span class="date">1</span><div class="event">Ano Novo — Feriado</div></td>
+                            <td><span class="date">2</span></td>
+                            <td><span class="date">3</span></td>
+                            <td><span class="date">4</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">5</span></td>
+                            <td><span class="date">6</span></td>
+                            <td><span class="date">7</span></td>
+                            <td><span class="date">8</span></td>
+                            <td><span class="date">9</span></td>
+                            <td><span class="date">10</span><div class="event">Início curso HTML/CSS</div></td>
+                            <td><span class="date">11</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">12</span></td>
+                            <td><span class="date">13</span></td>
+                            <td><span class="date">14</span></td>
+                            <td><span class="date">15</span></td>
+                            <td><span class="date">16</span></td>
+                            <td><span class="date">17</span></td>
+                            <td><span class="date">18</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">19</span></td>
+                            <td><span class="date">20</span><div class="event">Workshop: Git</div></td>
+                            <td><span class="date">21</span></td>
+                            <td><span class="date">22</span></td>
+                            <td><span class="date">23</span></td>
+                            <td><span class="date">24</span></td>
+                            <td><span class="date">25</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">26</span></td>
+                            <td><span class="date">27</span></td>
+                            <td><span class="date">28</span></td>
+                            <td><span class="date">29</span></td>
+                            <td><span class="date">30</span></td>
+                            <td><span class="date">31</span></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Fevereiro 2026 -->
+            <div class="calendar" aria-label="Calendário Fevereiro 2026">
+                <table>
+                    <caption>Fevereiro 2026</caption>
+                    <thead>
+                        <tr>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                            <th>Dom</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td><span class="date">1</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">2</span></td>
+                            <td><span class="date">3</span></td>
+                            <td><span class="date">4</span></td>
+                            <td><span class="date">5</span></td>
+                            <td><span class="date">6</span></td>
+                            <td><span class="date">7</span></td>
+                            <td><span class="date">8</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">9</span></td>
+                            <td><span class="date">10</span></td>
+                            <td><span class="date">11</span></td>
+                            <td><span class="date">12</span></td>
+                            <td><span class="date">13</span></td>
+                            <td><span class="date">14</span><div class="event">Entrega projeto</div></td>
+                            <td><span class="date">15</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">16</span><div class="event">Carnaval (data móvel)</div></td>
+                            <td><span class="date">17</span></td>
+                            <td><span class="date">18</span></td>
+                            <td><span class="date">19</span></td>
+                            <td><span class="date">20</span></td>
+                            <td><span class="date">21</span></td>
+                            <td><span class="date">22</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date">23</span></td>
+                            <td><span class="date">24</span><div class="event">Prova/Exame</div></td>
+                            <td><span class="date">25</span></td>
+                            <td><span class="date">26</span></td>
+                            <td><span class="date">27</span></td>
+                            <td><span class="date">28</span></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="muted" style="margin-top:12px">Observação: feriados e eventos são exemplos; ajuste as datas conforme necessário.</p>
+    </div>
+</body>
+</html>
